@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	<title>The Puppy API</title>
+	
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+	<div id="wrap">
+		<div class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">The Puppy API</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="page-header">
+				<h1>Every puppy has its day!</h1>
+			</div>
+			<p class="lead">
+				Adding a random puppy to your app is now easy as pie. Find brand new puppies everyday!
+			</p>
+			<div class="jumbotron">
+				<img class="puppy img-thumbnail" src="{{.}}"/>
+				<p class="lead">
+					<a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.thepuppyapi.com&media={{.}}&description=Pin%20Your%20Puppy" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+					</br>
+					</br>
+					Random puppy image?
+					</br>
+					<code>&lt;img src="http://www.thepuppyapi.com/puppy?format=src"&gt;</code>
+					</br>
+					</br>
+					Speak JSON?
+					</br>
+					<code>curl -i http://www.thepuppyapi.com/puppy</code>
+					</br>
+					</br>
+					Specific breed?
+					</br>
+					<code>http://www.thepuppyapi.com/puppy?breed=husky</code>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+</body>
+</html>

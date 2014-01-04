@@ -1,12 +1,12 @@
 package main
 
 import (
-	"thepuppyapi/database"
 	"encoding/json"
 	"html/template"
 	"log"
 	"net/http"
 	"os"
+	"thepuppyapi/database"
 )
 
 func Index(res http.ResponseWriter, req *http.Request) {

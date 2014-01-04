@@ -1,7 +1,6 @@
 package main
 
 import (
-	"thepuppyapi/database"
 	"code.google.com/p/google-api-go-client/customsearch/v1"
 	"code.google.com/p/google-api-go-client/googleapi/transport"
 	_ "github.com/lib/pq"
@@ -9,6 +8,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"thepuppyapi/database"
 )
 
 func GetPuppySearchHandle(breed string) *customsearch.CseListCall {
@@ -61,7 +61,7 @@ func AddPuppySearchResults(breed string, searchResults []*customsearch.Result) {
 	}
 
 	log.Printf("finder.AddPuppySearchResults: Found %v search results", len(searchResults))
-	
+
 	for _, result := range searchResults {
 		imageUrl := result.Link
 		imageType := strings.Split(result.Mime, "/")[1]

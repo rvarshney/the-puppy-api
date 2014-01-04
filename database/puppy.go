@@ -9,9 +9,9 @@ import (
 )
 
 type Puppy struct {
-	ImageUrl string
+	ImageUrl  string
 	ImageType string
-	Breed string
+	Breed     string
 }
 
 var db *sql.DB

@@ -30,11 +30,11 @@ func GetPuppySearchHandle(breed string) *customsearch.CseListCall {
 
 	// Set up the search parameters for the service
 	searchCx := os.Getenv("SEARCH_CX")
-	searchExactTerms := "puppy"
+	searchExactTerms := "cute dogs"
 	searchType := "image"
 	searchImageSize := "large"
-	searchQuery := breed + " puppy pictures"
-	searchStartIndex := int64(30)
+	searchQuery := breed + " pictures"
+	searchStartIndex := int64(50)
 
 	// Get search handle
 	searchHandle := searchService.Cse.List(searchQuery).Cx(searchCx).ExactTerms(searchExactTerms).SearchType(searchType).Start(searchStartIndex).ImgSize(searchImageSize)
@@ -72,7 +72,7 @@ func AddPuppySearchResults(breed string, searchResults []*customsearch.Result) {
 func main() {
 	database.InitPuppyDB()
 
-	breed := "labrador"
+	breed := "akita"
 	searchResults := GetPuppySearchResults(breed)
 	AddPuppySearchResults(breed, searchResults)
 }

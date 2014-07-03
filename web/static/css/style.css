@@ -5,6 +5,8 @@ body {
 
 code {
   font-size: 80%;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 #wrap {
@@ -23,7 +25,6 @@ code {
 }
 
 .puppy {
-	max-width: 500px;
 	padding: 20px;
 	margin-bottom: 20px;
 }
